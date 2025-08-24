@@ -147,7 +147,7 @@ function getJson(path) {
 
 // Delete a decision
 function deleteDecision(id) {
-  const timestamp = (Date.now() - 1000).toString();
+  const timestamp = (Date.now() - TIMEOFFSET).toString();
   const signature = createSignature(API_PASSWORD, timestamp);
 
   return new Promise((resolve, reject) => {
